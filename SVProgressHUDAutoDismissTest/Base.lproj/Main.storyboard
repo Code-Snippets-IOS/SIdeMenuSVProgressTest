@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FaK-qa-egx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="uq7-Ln-Bcd">
+            <objects>
+                <navigationController id="f1n-02-QJI" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nT2-Il-3BO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nFI-2c-7hV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOX-Ze-1gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1387" y="-57"/>
+        </scene>
+        <!--Left Side Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LeftSideMenuViewController" customModule="SVProgressHUDAutoDismissTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnf-CK-QX4">
+                                <rect key="frame" x="111.5" y="318" width="151" height="30"/>
+                                <state key="normal" title="Go To Side Menu Item"/>
+                                <connections>
+                                    <segue destination="CBN-K9-CHV" kind="show" id="JqZ-57-Ygu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LeftSideMenuViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akR-gQ-9Je">
+                                <rect key="frame" x="20" y="84" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="akR-gQ-9Je" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ELt-Qn-V4T"/>
+                            <constraint firstItem="akR-gQ-9Je" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="G2e-mA-d3i"/>
+                            <constraint firstItem="Jnf-CK-QX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cpz-XP-xP9"/>
+                            <constraint firstAttribute="trailing" secondItem="akR-gQ-9Je" secondAttribute="trailing" constant="20" id="hts-8G-Wna"/>
+                            <constraint firstItem="Jnf-CK-QX4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wTd-Hg-9WS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Sf-Qb-ZAK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Side Menu Item View Controller-->
+        <scene sceneID="ftS-3L-W81">
+            <objects>
+                <viewController id="CBN-K9-CHV" customClass="SideMenuItemViewController" customModule="SVProgressHUDAutoDismissTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eFH-2p-Ga2"/>
+                        <viewControllerLayoutGuide type="bottom" id="dSW-y8-4wg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1yE-1I-zK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SideMenuItemViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-ID-MDe">
+                                <rect key="frame" x="0.0" y="84" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BTf-ID-MDe" firstAttribute="leading" secondItem="1yE-1I-zK3" secondAttribute="leading" id="Ats-NS-HrX"/>
+                            <constraint firstAttribute="trailing" secondItem="BTf-ID-MDe" secondAttribute="trailing" id="cZj-TP-xHA"/>
+                            <constraint firstItem="BTf-ID-MDe" firstAttribute="top" secondItem="eFH-2p-Ga2" secondAttribute="bottom" constant="20" id="zxI-NI-LBq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oab-Ry-njt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="miZ-Ka-oID">
+            <objects>
+                <navigationController id="FaK-qa-egx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iU8-bA-fSe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VEr-Sk-uS1" kind="relationship" relationship="rootViewController" id="Pmd-jo-K0V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61j-ng-yRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="881"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Xhc-pJ-mY1">
+            <objects>
+                <viewController id="VEr-Sk-uS1" customClass="HomeViewController" customModule="SVProgressHUDAutoDismissTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H6c-fa-1X4"/>
+                        <viewControllerLayoutGuide type="bottom" id="JBQ-y6-aff"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xLS-Ub-tIt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1S-k0-Cl2">
+                                <rect key="frame" x="20" y="84" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D1S-k0-Cl2" firstAttribute="top" secondItem="H6c-fa-1X4" secondAttribute="bottom" constant="20" id="7SK-R1-j2b"/>
+                            <constraint firstItem="D1S-k0-Cl2" firstAttribute="leading" secondItem="xLS-Ub-tIt" secondAttribute="leading" constant="20" id="eKk-Ej-eY6"/>
+                            <constraint firstAttribute="trailing" secondItem="D1S-k0-Cl2" secondAttribute="trailing" constant="20" id="vPv-db-pod"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="a3E-Sm-JgD">
+                        <barButtonItem key="leftBarButtonItem" title="menu" id="LiO-CQ-UwR">
+                            <connections>
+                                <segue destination="f1n-02-QJI" kind="show" id="hen-lm-qwb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sC-kB-aZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="843"/>
+        </scene>
+    </scenes>
+</document>
